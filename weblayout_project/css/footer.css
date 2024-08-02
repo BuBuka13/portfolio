@@ -1,0 +1,39 @@
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer {
+  background-color: black;
+}
+
+.footer__link {
+  margin-left: 20px;
+  outline: none;
+  transition: color .2s linear;
+  color: #CACACA;
+}
+
+.footer__svg {
+  fill: #CACACA;
+  transition: color .2s linear, fill .2s linear;
+}
+
+.footer__link:hover,
+.footer__svg:hover{
+  color: white;
+  fill: #FFFFFF;
+}
+
+.footer__link:focus {
+  color: white;
+}
+
+.footer__link:active,
+.footer__svg:active {
+  color: #9D5CD0;
+  fill: #9D5CD0;
+}

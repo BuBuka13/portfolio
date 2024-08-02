@@ -1,0 +1,168 @@
+.how {
+  padding-top: 47px;
+  padding-bottom: 50px;
+}
+
+.how__subtitle {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.how__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+
+.how__item {
+  font-weight: var(--regular);
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.how__item:not(:last-child) {
+  margin-right: 86px;
+}
+
+.how__link {
+  transition: color 0.2s linear;
+}
+
+.how__link:hover {
+  color: var(--orange);
+}
+
+.how__link:focus {
+  color: var(--black);
+  outline: 2px solid var(--orange);
+  outline-offset: 5px;
+}
+
+.how__link:active {
+  color: var(--active);
+  outline: none;
+}
+
+.how__link.active {
+  color: var(--orange);
+}
+
+.how__wrap {
+  display: none;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.how__wrap.active {
+  display: flex;
+  animation-name: fade-in;
+  animation-duration: 0.7s;
+}
+
+.how__wrap-left {
+  display: flex;
+  flex-direction: column;
+  width: calc(870 / 1770 * 100%);
+}
+
+.how__wrap-right {
+  display: flex;
+  flex-direction: column;
+  width: calc(870 / 1770 * 100%);
+  height: 460px;
+  margin-top: 8px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 32px;
+}
+
+.how__wrapimg--one {
+  background-image: url('../img/how_image.jpg');
+}
+
+.how__wrapimg--two {
+  background-image: url('../img/how_1920.jpg');
+}
+
+.how__wrapimg--three {
+  background-image: url('../img/how_1920-2.jpg');
+}
+
+.how__wrapimg--four {
+  background-image: url('../img/how_1920-3.jpg');
+}
+
+
+.how__text {
+  max-width: 758px;
+  margin-top: 0;
+  margin-bottom: 19px;
+}
+
+.how__title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.how__btn-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.how__btn:not(:last-child) {
+  margin-right: 32px;
+}
+
+.btn-first {
+  font-weight: var(--bold);
+  border: none;
+  color: var(--white);
+  background-color: var(--orange);
+}
+
+.btn-first:hover {
+  background-color: var(--focus);
+}
+
+.btn-first:focus:not(:hover) {
+  outline: none;
+  background-color: var(--focus);
+}
+
+.btn-first:active {
+  background-color: var(--active);
+}
+
+.btn-second {
+  font-weight: var(--regular);
+  border: 1px solid var(--black);
+  color: var(--black);
+  background-color: var(--white);
+  transition: transform .3s;
+}
+
+.btn-second:hover {
+
+  color: var(--white);
+  background-color: var(--gray);
+  cursor: pointer;
+}
+
+.btn-second:focus:not(:hover) {
+  outline: none;
+  color: var(--white);
+  background-color: var(--gray);
+}
+
+.btn-second:active {
+  color: var(--white);
+  background-color: var(--black);
+}

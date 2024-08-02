@@ -1,0 +1,101 @@
+.catalog__accordeon {
+  margin: 0;
+}
+
+.catalog__accbtn {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: -1px;
+  padding-top: 40px;
+  padding-bottom: 38px;
+  padding-right: 90px;
+  padding-left: 0;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid var(--footer);
+  font-weight: var(--bold);
+  font-size: 24px;
+  line-height: var(--default-lh);
+  text-align: left;
+  transition-property: color, border-color;
+  transition-duration: .3s;
+}
+
+.catalog__item:first-child .catalog__accbtn {
+  border-top: 1px solid var(--footer);
+}
+
+.catalog__item:not(:first-child) .catalog__accbtn {
+  border-top: 1px solid transparent;
+}
+
+.catalog__item .catalog__accbtn:hover {
+  color: #9D5CD0;
+  border-color: #9D5CD0;
+  cursor: pointer;
+}
+
+.catalog__accbtn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23CACACA'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='black'/%3E%3C/svg%3E%0A");
+  transform: translateY(-50%);
+  transition: background-image .3s, transform .5s;
+
+}
+
+.catalog__accbtn:hover::after {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23FF9900'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.catalog__item .catalog__accbtn:focus {
+  /* color: white;
+  background-color: #7943A4;
+  padding: 2px 6px; */
+}
+
+.catalog__accbtn:focus::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cellipse cx='25' cy='25' rx='25' ry='25' fill='%23FF9900'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.catalog__content {
+  overflow: hidden;
+}
+
+.catalog__content-first-column,
+.catalog__content-second-column,
+.catalog__content-third-column {
+  padding-bottom: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease, visibility .5s ease;
+  transition-delay: .3s;
+}
+
+.is-active .catalog__content-first-column,
+.catalog__content-second-column,
+.catalog__content-third-column {
+  opacity: 1;
+  visibility: visible;
+}
+
+.is-active .catalog__accbtn::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.empty {
+  display: none;
+}
+
+.catalog__item .catalog__accbtn:active {
+  color: #7943A4;
+  border-color: #7943A4;
+  cursor: pointer;
+}
+
+
